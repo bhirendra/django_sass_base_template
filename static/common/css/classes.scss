@@ -1,0 +1,107 @@
+/**
+ This file includes all the common custom classes to be used in HTML.
+ */
+@import "variables";
+h4, h5, *{
+  font-family: 'Lato', sans-serif; //
+}
+/********** Padding Margin ********/
+.no-margin{
+  margin: 0;
+}
+.no-left-margin{
+  margin-left: 0;
+}
+.no-right-margin{
+  margin-right: 0;
+}
+.no-top-margin{
+  margin-top: 0;
+}
+.no-bottom-margin{
+  margin-bottom: 0;
+}
+.no-left-padding{
+  padding-left: 0;
+}
+.no-right-padding{
+  padding-right: 0;
+}
+.no-top-padding{
+  padding-top: 0;
+}
+.no-bottom-padding{
+  padding-top: 0;
+}
+
+/*-------- Height -------*/
+.height-inherit{
+  height: inherit;
+}
+.height-100{
+  height: 100%;
+}
+/*-------- width -------*/
+.width-inherit{
+  width: inherit;
+}
+.width-100{
+  width: 100%;
+}
+/*-------- Overflow -------*/
+.overflow-all-auto{
+  overflow: auto;
+}
+.overflow-all-hidden{
+  overflow: hidden;
+}
+.overflow-x-auto{
+  overflow-x: auto;
+}
+.overflow-y-auto{
+  overflow-y: auto;
+}
+.overflow-x-hidden{
+  overflow-x: hidden;
+}
+.overflow-y-hidden{
+  overflow-y: hidden;
+}
+
+/******* Font size classes (px) ***********/
+@each $i in $font-size-px-list{
+  .font-#{$i}px{
+    font-size:#{$i}px;
+  }
+}
+/******* Font size classes (rem) ***********/
+//@each $i in $font-size-rem-list{
+//  @if(round($i)== $i){
+//    .font-#{$i}rem{
+//      font-size:#{$i}rem;
+//    }
+//  }
+//  @else {
+//    //$decimalValue : ($i * 10) - 10;
+//    $decimalValue : round();
+//    $fractionValue : $i*10 % 10;
+//    .font-#{$decimalValue}point#{$fractionValue}rem{
+//      font-size:#{$i}rem;
+//    }
+//  }
+//}
+/******* Font Weight classes ***********/
+@each $i in $font-weight-list{
+  .font-weight-#{$i}{
+    font-weight:#{$i};
+  }
+}
+.font-weight-bold{
+  font-weight: bold;
+}
+.font-weight-normal{
+  font-weight: normal;
+}
+.font-weight-lighter{
+  font-weight: lighter;
+}

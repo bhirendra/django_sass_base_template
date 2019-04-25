@@ -1,0 +1,27 @@
+@import "../../common/css/style.scss"; // Import common all in one stylesheet
+.container-main{
+  max-width: 600px;
+  margin: auto;
+  .container-buttons{
+    padding: 20px 0;
+    margin-bottom: 1rem;
+    .section-title{
+      h4.h4-title{
+        font-size: $font-24px;
+        color: $color-text-grey-dark;
+        margin-bottom: 10px;
+      }
+      p.p-subtitle{
+        font-style: $font-16px;
+        color: $color-text-grey;
+      }
+    }
+    .section-content{
+      padding: 10px 0;
+      a.btn{
+        margin: 5px 0;
+        width: auto;
+      }
+    }
+  }
+}

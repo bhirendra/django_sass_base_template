@@ -1,0 +1,15 @@
+@import "form";
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+img{
+  user-drag: none !important;
+  user-select: none !important;
+  @include user-select-none;
+}
+a{
+  @include user-select-none;
+}

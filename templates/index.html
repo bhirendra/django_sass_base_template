@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome to Django Sass Base Template</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    {% load sass_tags %}
+    <link rel="stylesheet" type="text/css" href="{% sass_src 'home/css/home.scss' %}">
+</head>
+<body>
+<div class="container-main">
+    <div class="container-buttons">
+        <div class="section-title">
+            <h4 class="h4-title no-margin">Simple Buttons</h4>
+            <p class="p-subtitle no-margin">Following premade buttons are available.</p>
+        </div>
+        <div class="section-content">
+            <div>
+                <a class="btn btn-primary">Primary Button</a>
+                <a class="btn btn-outline-primary">Primary Button</a>
+                <a class="btn btn-primary" disabled>Primary Button disabled</a>
+            </div>
+            <div>
+                <a class="btn btn-info">Info Button</a>
+                <a class="btn btn-info" disabled>Info Button disabled</a>
+            </div>
+            <div>
+                <a class="btn btn-success">Success Button</a>
+                <a class="btn btn-success" disabled>Success Button Disabled</a>
+            </div>
+            <div>
+                <a class="btn btn-warning">Warning Button</a>
+                <a class="btn btn-warning" disabled>Warning Button Disabled</a>
+            </div>
+            <div>
+                <a class="btn btn-danger">Danger Button</a>
+                <a class="btn btn-danger" disabled>Danger Button Disabled</a>
+            </div>
+            <div>
+                <a class="btn-floating btn-primary" href="#"><i class="material-icons">edit</i></a>
+                <a class="btn-floating btn-primary btn-outline-primary" href="#"><i class="material-icons">edit</i></a>
+                <a class="btn-floating btn-info" href="#"><i class="material-icons">edit</i></a>
+                <a class="btn-floating btn-success" href="#"><i class="material-icons">edit</i></a>
+                <a class="btn-floating btn-warning" href="#"><i class="material-icons">edit</i></a>
+                <a class="btn-floating btn-danger" href="#"><i class="material-icons">edit</i></a>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

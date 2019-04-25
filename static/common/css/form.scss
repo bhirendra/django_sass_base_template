@@ -1,0 +1,263 @@
+/*
+  This file includes all the common custom classes to be used in HTML.
+ */
+@import "mixins";
+/** Hide all the browser default input appearance. **/
+input{
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+/************** Input field div ***********/
+.input-field-div{
+  position: relative;
+  margin-bottom: 1rem;
+  label{
+    @include font-size(1rem);
+    color: black;
+  }
+  input[type=text],
+  input[type=email],
+  input[type=number],
+  input[type=date],
+  input[type=password],
+  textarea,
+  select.browser-default
+  {
+    width: 100%;
+    line-height: 1;
+    background: white;
+    color: black;
+    height: 3rem;
+    margin: 0;
+    border: 1px solid #C8C8C8;
+    font-size: $font-16px;
+    padding: 5px 10px 5px 10px;
+    @include box-sizing(border-box);
+    @include border-radius(2px);
+    &:focus:not(:read-only), &:focus{
+      outline: none;
+      @include box-shadow-none;
+      border: 1px solid $color-primary-light;
+      @include box-shadow(0px, 0px, 6px, 0, rgba(0, 151, 250, 0.28));
+    }
+    &.error-border{
+      &:not(:focus){
+        border-color: rgba(255, 69, 0, 0.67);
+      }
+      &:focus:not(:read-only){
+        border-color: rgba(255, 69, 0, 0.67);
+        @include box-shadow(0px, 0px, 6px, 0, rgba(255, 126, 93, 0.45))
+      }
+    }
+  }
+  select.browser-default{
+    -webkit-appearance: none;
+    background-image: linear-gradient(45deg, transparent 50%, gray 50%), linear-gradient(135deg, gray 50%, transparent 50%);
+    background-position: calc(100% - 20px) calc(1em + 2px), calc(100% - 15px) calc(1em + 2px), calc(100% - 2.5em) 0.5em;
+    background-size: 5px 5px, 5px 5px, 1px 1.5em;
+    background-repeat: no-repeat;
+    &[disabled]{
+      cursor: not-allowed;
+    }
+  }
+}
+
+/***************** Button style ******************/
+.btn-floating{
+  @include display(inline-flex);
+  @include justify-content(center);
+  @include align-items(center);
+  width: 40px;
+  height: 40px;
+  @include border-radius(50% 50%);
+  @include box-shadow-1-arg(0 4px 6px rgba(50,50,93,.11), 0 1px 3px rgba(0,0,0,.08));
+  @include text-decoration(none);
+  border: 1px solid transparent;
+  i{
+    height: 40px;
+    line-height: 40px;
+    @include font-size($font-22px);
+    color: white;
+  }
+}
+.btn{
+  width: 100%;
+  @include display(inline-flex);
+  @include align-items(center);
+  @include justify-content(center);
+  position: relative;
+  text-transform: uppercase;
+  cursor: pointer;
+  padding: 5px 10px;
+  min-height: 35px;
+  will-change: transform;
+  color: white;
+  border: 1px solid transparent;
+  @include white-space(no-wrap);
+  @include vertical-align(middle);
+  @include user-select-none;
+  @include border-radius(2px);
+  @include font-size(1rem);
+  @include transition(all,.15s, ease);
+  @include box-shadow-1-arg(0 4px 6px rgba(50,50,93,.11), 0 1px 3px rgba(0,0,0,.08));
+  &.capitalize-text{
+    @include text-transform(capitalize);
+  }
+  &[disabled]{
+    background-color: #E1E1E1;
+    @include box-shadow-none;
+    color: white;
+    pointer-events: none;
+    cursor: not-allowed;
+  }
+  i{
+    font-size: $font-16px;
+    &.left{
+      margin-right: 5px;
+    }
+    &.right{
+      margin-right: 5px;
+    }
+  }
+  &:hover{
+    @include transform(translateY(-1px));
+    @include box-shadow-1-arg(0 7px 14px rgba(50,50,93,.1), 0 3px 6px rgba(0,0,0,.08));
+  }
+}
+/******* TODO Button primary *******/
+#{$default-btn-identifier}#{$default-btn-primary-identifier},
+#{$default-btn-floating-identifier}#{$default-btn-primary-identifier}{
+  background-color: $color-primary;
+  border-color: $color-primary;
+}
+#{$default-btn-identifier}#{$default-btn-primary-identifier}:active,
+#{$default-btn-floating-identifier}#{$default-btn-primary-identifier}:active{
+  background-color: $color-primary-dark;
+  border-color: $color-primary-dark;
+}
+#{$default-btn-identifier}#{$default-btn-primary-identifier}[disabled],
+#{$default-btn-floating-identifier}#{$default-btn-primary-identifier}[disabled]{
+  background-color: $color-primary-disabled;
+  border-color: $color-primary-disabled;
+}
+/******* TODO Button outline primary *******/
+#{$default-btn-identifier}#{$default-btn-outline-primary-identifier},
+#{$default-btn-floating-identifier}#{$default-btn-outline-primary-identifier}{
+  border-color: $color-primary;
+  color: $color-primary;
+  background-color: white;
+  i{
+    color: $color-primary;
+    border-color: $color-primary;
+  }
+}
+#{$default-btn-identifier}#{$default-btn-outline-primary-identifier}:active,
+#{$default-btn-floating-identifier}#{$default-btn-outline-primary-identifier}:active,
+#{$default-btn-identifier}#{$default-btn-outline-primary-identifier}:hover,
+#{$default-btn-floating-identifier}#{$default-btn-outline-primary-identifier}:hover{
+  background-color: $color-primary;
+  border-color: $color-primary;
+  color: white;
+  i{
+    color: white;
+  }
+}
+#{$default-btn-identifier}#{$default-btn-primary-identifier}[disabled],
+#{$default-btn-floating-identifier}#{$default-btn-primary-identifier}[disabled]{
+  border-color: $color-primary-disabled;
+  color: $color-primary-disabled;
+  background-color: white;
+  i{
+    color: $color-primary-disabled;
+  }
+}
+/******* TODO Button neutral *******/
+#{$default-btn-identifier}.btn-neutral,
+#{$default-btn-floating-identifier}.btn-neutral{
+  color: $color-primary;
+  background-color: white;
+  i{
+    color: $color-primary;
+  }
+}
+#{$default-btn-identifier}.btn-neutral:active,
+#{$default-btn-floating-identifier}.btn-neutral:active{
+  background-color: #E6E6E6;
+}
+#{$default-btn-identifier}.btn-neutral[disabled],
+#{$default-btn-floating-identifier}.btn-neutral[disabled]{
+  color: #eeeeee;
+  background-color: white;
+  i{
+    color: #eeeeee;
+  }
+}
+/******* TODO Button info *******/
+#{$default-btn-identifier}.btn-info,
+#{$default-btn-floating-identifier}.btn-info{
+  background-color: $color-info;
+  border-color: $color-info;
+}
+#{$default-btn-identifier}.btn-info:active,
+#{$default-btn-floating-identifier}.btn-info:active{
+  background-color: $color-info-dark;
+  border-color: $color-info-dark;
+}
+#{$default-btn-identifier}.btn-info[disabled],
+#{$default-btn-floating-identifier}.btn-info[disabled]{
+  background-color: $color-info-disabled;
+  border-color: $color-info-disabled;
+}
+
+/******* TODO Button success *******/
+#{$default-btn-identifier}.btn-success,
+#{$default-btn-floating-identifier}.btn-success{
+  background-color: $color-success;
+  border-color: $color-success;
+}
+#{$default-btn-identifier}.btn-success:active,
+#{$default-btn-floating-identifier}.btn-success:active{
+  background-color: $color-success-dark;
+  border-color: $color-success-dark;
+}
+#{$default-btn-identifier}.btn-success[disabled],
+#{$default-btn-floating-identifier}.btn-success[disabled]{
+  background-color: $color-success-disabled;
+  border-color: $color-success-disabled;
+}
+
+/******* TODO Button warning *******/
+#{$default-btn-identifier}.btn-warning,
+#{$default-btn-floating-identifier}.btn-warning{
+  background-color: $color-warning;
+  border-color: $color-warning;
+}
+#{$default-btn-identifier}.btn-warning:active,
+#{$default-btn-floating-identifier}.btn-warning:active{
+  background-color: $color-warning-dark;
+  border-color: $color-warning-dark;
+}
+#{$default-btn-identifier}.btn-warning[disabled],
+#{$default-btn-floating-identifier}.btn-warning[disabled]{
+  background-color: $color-warning-disabled;
+  border-color: $color-warning-disabled;
+}
+
+/******* TODO Button danger *******/
+#{$default-btn-identifier}.btn-danger,
+#{$default-btn-floating-identifier}.btn-danger{
+  background-color: $color-danger;
+  border-color: $color-danger;
+}
+#{$default-btn-identifier}.btn-danger:active,
+#{$default-btn-floating-identifier}.btn-danger:active{
+  background-color: $color-danger-dark;
+  border-color: $color-danger-dark;
+}
+#{$default-btn-identifier}.btn-danger[disabled],
+#{$default-btn-floating-identifier}.btn-danger[disabled]{
+  background-color: $color-danger-disabled;
+  border-color: $color-danger-disabled;
+}
