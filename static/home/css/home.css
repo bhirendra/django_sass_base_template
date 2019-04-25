@@ -164,13 +164,20 @@ input {
   position: relative;
   margin-bottom: 1rem; }
   .input-field-div label {
+    -webkit-display: block;
+    -moz-display: block;
+    -ms-display: block;
+    -o-display: block;
+    -khtml-display: block;
+    display: block;
     -webkit-font-size: 1rem;
     -moz-font-size: 1rem;
     -ms-font-size: 1rem;
     -o-font-size: 1rem;
     -khtml-font-size: 1rem;
     font-size: 1rem;
-    color: black; }
+    color: #656565;
+    margin-bottom: 5px; }
   .input-field-div input[type=text],
   .input-field-div input[type=email],
   .input-field-div input[type=number],
@@ -537,19 +544,19 @@ a {
 .container-main {
   max-width: 600px;
   margin: auto; }
-  .container-main .container-buttons {
+  .container-main .container-content {
     padding: 20px 0;
     margin-bottom: 1rem; }
-    .container-main .container-buttons .section-title h4.h4-title {
+    .container-main .container-content .section-title h4.h4-title {
       font-size: 24px;
       color: #5C5C5C;
       margin-bottom: 10px; }
-    .container-main .container-buttons .section-title p.p-subtitle {
+    .container-main .container-content .section-title p.p-subtitle {
       font-style: 16px;
       color: #858585; }
-    .container-main .container-buttons .section-content {
+    .container-main .container-content .section-content {
       padding: 10px 0; }
-      .container-main .container-buttons .section-content a.btn {
+      .container-main .container-content .section-content a.btn {
         margin: 5px 0;
         width: auto; }
 

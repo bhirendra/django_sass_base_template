@@ -14,8 +14,10 @@ input{
   position: relative;
   margin-bottom: 1rem;
   label{
+    @include display(block);
     @include font-size(1rem);
-    color: black;
+    color: #656565;
+    margin-bottom: 5px;
   }
   input[type=text],
   input[type=email],
