@@ -65,7 +65,7 @@ input{
 }
 
 /***************** Button style ******************/
-.btn-floating{
+#{$default-btn-floating-identifier}{
   @include display(inline-flex);
   @include justify-content(center);
   @include align-items(center);
@@ -82,7 +82,7 @@ input{
     color: white;
   }
 }
-.btn{
+#{$default-btn-identifier}{
   width: 100%;
   @include display(inline-flex);
   @include align-items(center);
