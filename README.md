@@ -1,6 +1,6 @@
 # django_sass_base_template
-Generally we gets fed up to setup the base css files for a new project, What we does is to write code from the beginning or just copy and paste the code from the other existing project.
-So no more wasting time from now on. Just clone this project repo, follow the usage and you are done.
+We often get fed up setting up base CSS files for every new project. What we usually end up doing is either writing everything from scratch or copy-pasting from an existing project.
+No more wasting time! Just clone this project repo, follow the usage instructions, and you're good to go.
 
 ## Requirements
 - [django-sass-processor](https://github.com/jrief/django-sass-processor "django-sass-processor")
@@ -11,7 +11,7 @@ So no more wasting time from now on. Just clone this project repo, follow the us
 Clone it and change the django_sass_base_template -> **your_project_name**
 
 #### Step 2
-install the requirements by the following command. Make sure you have activated the virtualenv.
+install the requirements by using the below command. Make sure you have activated the virtualenv before running the command.
 ```terminal
 pip install -r requirements.txt
 ```
@@ -57,7 +57,7 @@ This project is made only to reduce the timing of setup the project when we work
 - Code Styling
 - Easy way to do this setup done.
 
-This is my first github open source project made only for developers to reduce their precious time when making a new SASS project.
+This is my first github open source project made only for developers to reduce their precious time when creating a new SASS based project.
 So PR's are most welcome :smile: .
 
 ### End
